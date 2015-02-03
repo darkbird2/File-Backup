@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 			fileIn = fopen(argv[1], "rb");
 			strcpy (arr, argv[1]);
 			//searches through till a '\' is found in the code
-			for( dashCounter = 100; dashCounter > 0; dashCounter-- )
+			for( dashCounter = MAX_PATH; dashCounter > 0; dashCounter-- )
 			{
 				if(arr[dashCounter] == '\\')
 			{
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
 			}
 		}
 			//searches through till a '.' is found in the code
-		for( periodCounter = 100; periodCounter > 0; periodCounter-- )
+		for( periodCounter = MAX_PATH; periodCounter > 0; periodCounter-- )
 		{
 			if(arr[periodCounter] == '.')
 			{
